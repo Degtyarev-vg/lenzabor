@@ -1,0 +1,19 @@
+include ../blocks.project/includes
+
+doctype html
+html(lang="ru")
+  include templates/head/head
+    block head
+      - var pageTitle = "Заборы для дачи в Спб и Ленобласти";
+
+  +page
+
+    +header(true)._index.__header
+
+    +b("main").main.__main
+      .grid
+        //- Other code for index page
+
+    +footer(true).__footer
+
+    +copyright
