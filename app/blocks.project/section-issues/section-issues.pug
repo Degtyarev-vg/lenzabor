@@ -10,7 +10,7 @@ mixin section-issues()
             each question in block.questions
               +e("a")(class="question" + ((i == 1 && j == 1) ? "_active" : "") href="#tab" + i + "-" + j) !{question.title}
               +e(class="content" + ((i == 1 && j == 1) ? "_open" : "") id="tab" + i + "-" + j)
-                +e("h2").title !{question.title}
+                +b("h2").heading.__heading !{question.title}
                 +e.text !{question.content}
               - j++;
         - i++;

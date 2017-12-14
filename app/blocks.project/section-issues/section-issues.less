@@ -126,41 +126,8 @@
     }
   }
 
-  &__title {
-    font-family: @pt_serifbold;
-    font-size: 30px;
-    line-height: 34px;
-    font-weight: normal;
-    color: #242424;
-    padding-left: 25px;
-    position: relative;
+  &__heading {
     margin-bottom: 20px;
-    @media (max-width: 1199px) {
-      font-size: 25px;
-    }
-    &:before {
-      background-color: @main-color;
-      border-radius: 25px;
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      height: 85%;
-      width: 5px;
-      @media (max-width: 1199px) {
-        top: 0;
-        transform: translateY(0);
-        height: 100%;
-        max-height: 57px;
-      }
-      @media (max-width: 767px) {
-        top: 50%;
-        transform: translateY(-50%);
-        height: 85%;
-        max-height: 85%;
-      }
-    }
   }
 
   &__text {
