@@ -9,11 +9,17 @@ html(lang="ru")
   +page
 
     +header(true)._index.__header
-
-
-    +b.content.__content
       .grid
-        //- Other code for index page
+        +e.bottom
+          +e("h1").header Установка заборов
+          +e("h3").subheader в Ленинградской области и Санкт-Петербурге
+
+
+    +b.content._gray.__content
+
+      +advantages._index
+
+      +section-services
 
 
     +footer(true).__footer

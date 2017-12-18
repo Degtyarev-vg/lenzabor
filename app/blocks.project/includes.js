@@ -5,3 +5,5 @@
 //= include vertical-menu/vertical-menu.js
 //= include section-issues/section-issues.js
 //= include mask/mask.js
+//= include section-services/section-services.js
+//= include service-slider/service-slider.js
