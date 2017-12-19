@@ -7,3 +7,5 @@
 //= include mask/mask.js
 //= include section-services/section-services.js
 //= include service-slider/service-slider.js
+//= include section-prices/section-prices.js
+//= include input-file/input-file.js

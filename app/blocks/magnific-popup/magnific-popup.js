@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
   // Magnific Popup
-  $(".popup-with-move-anim").magnificPopup({
-  //$(".popup-with-zoom-anim").magnificPopup({
+  //$(".popup-with-move-anim").magnificPopup({
+  $(".popup-with-zoom-anim").magnificPopup({
     type: "inline",
 
     fixedContentPos: false,
@@ -15,8 +15,8 @@ $(document).ready(function() {
 
     midClick: true,
     removalDelay: 300,
-    mainClass: "my-mfp-slide-bottom"
-    //mainClass: "my-mfp-zoom-in"
+    //mainClass: "my-mfp-slide-bottom"
+    mainClass: "my-mfp-zoom-in"
   });
 
 });

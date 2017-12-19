@@ -50,6 +50,7 @@
 .mfp-inline-holder .mfp-content,
 .mfp-ajax-holder .mfp-content {
   width: 100%;
+  text-align: center;/**/
   cursor: auto; }
 
 .mfp-ajax-cur {
