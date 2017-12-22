@@ -5,10 +5,10 @@ mixin footer(isMain)
         +e.item._logo
           if isMain
             +e.logo
-              +e("img")(src="img/logo-footer.png" alt="Лензабор.ру" width="158" height="125").logo-img
+              +e("img")(src="img/logo-footer.svg" alt="Лензабор.ру" width="158" height="125").logo-img
           else
             +e("a")(href="/").logo
-              +e("img")(src="img/logo-footer.png" alt="Лензабор.ру" width="158" height="125").logo-img
+              +e("img")(src="img/logo-footer.svg" alt="Лензабор.ру" width="158" height="125").logo-img
           +socials.__socials
         +e.item
           +b("nav").vertical-menu._toggle.__vertical-menu

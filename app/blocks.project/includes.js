@@ -9,3 +9,10 @@
 //= include service-slider/service-slider.js
 //= include section-prices/section-prices.js
 //= include input-file/input-file.js
+//= include section-works/section-works.js
+//= include section-reviews/section-reviews.js
+//= include tooltip/tooltip.js
+//= include section-calculator/section-calculator.js
+//= include custom-select/custom-select.js
+//= include side-item/side-item.js
+//= include keypad/keypad.js
