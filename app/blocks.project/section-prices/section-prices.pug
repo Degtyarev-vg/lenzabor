@@ -23,22 +23,27 @@ mixin section-prices()
               +b.form-price._popup.zoom-anim-dialog.mfp-hide(id="package" + i)
                 +e.container
                   +e("h3").heading Заполните форму
-                  +b("form")(action="#" method="post" enctype="multipart/form-data" autocomplete="off").form.__form
+                  +b("form")(action="#" method="post" enctype="multipart/form-data" autocomplete="off").form.__form.form-validation
                     +e.col._50
                       +label("name" + i, "Имя")._required-red
-                      +b("input")(type="text" name="name" required id="name" + i).input._name.__input
+                      .form-validation__group
+                        +b("input")(type="text" name="name" id="name" + i).input._name.__input.validation._minlength
                     +e.col._50
                       +label("phone" + i, "Телефон")
-                      +b("input")(type="text" name="phone" required id="phone" + i).input._phone.mask._phone.__input
+                      .form-validation__group
+                        +b("input")(type="text" name="phone" id="phone" + i).input._phone.mask._phone.__input.validation
                     +e.col._50
                       +label("email" + i, "Email")._required-red
-                      +b("input")(type="email" name="email" required id="email" + i).input._email.__input
+                      .form-validation__group
+                        +b("input")(type="email" name="email" id="email" + i).input._email.__input.validation._email
                     +e.col._50
                       +label("width" + i, "Длина забора, М.П.")._required-gray
-                      +b("input")(type="text" name="width" required id="width" + i).input._ruler.__input
+                      .form-validation__group
+                        +b("input")(type="text" name="width" id="width" + i).input._ruler.__input.validation._digits
                     +e.col
                       +label("text" + i, "Ваше сообщение")._required-red
-                      +b("textarea")(name="text" required id="text" + i).input._textarea.__input
+                      .form-validation__group
+                        +b("textarea")(name="text" id="text" + i).input._textarea.__input.validation._minlength
                     +e.col
                       +label("file" + i, "Прикрепите фото участка и (или) техническое задание")
                       +b.input-file

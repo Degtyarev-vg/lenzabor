@@ -6,3 +6,4 @@
 //= include jquery-stickit/jquery-stickit.min.js
 //= include jquery.keypad/js/jquery.plugin.min.js
 //= include jquery.keypad/js/jquery.keypad.min.js
+//= include jquery.validate/jquery.validate.min.js

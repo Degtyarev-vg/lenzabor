@@ -1,19 +1,23 @@
 mixin calculation-form()
   +b.calculation-form&attributes(attributes)
     +e("h3").title Расчитать стоимость забора
-    +e("form")(action="#" method="post" enctype="multipart/form-data" autocomplete="off").form
+    +e("form")(action="#" method="post" enctype="multipart/form-data" autocomplete="off").form.form-validation
       +e.col._4
         +label("name", "Имя")._required-red
-        +b("input")(type="text" name="name" required).input._name#name
+        .form-validation__group
+          +b("input")(type="text" name="name").input._name#name.validation._minlength
       +e.col._4
         +label("email", "Email")._required-red
-        +b("input")(type="email" name="email" required).input._email#email
+        .form-validation__group
+          +b("input")(type="email" name="email").input._email#email.validation._email
       +e.col._4
         +label("phone", "Телефон")
-        +b("input")(type="text" name="phone" required).input._phone.mask._phone#phone
+        .form-validation__group
+          +b("input")(type="text" name="phone").input._phone.mask._phone#phone.validation
       +e.col._4._push
         +label("width", "Метраж")
-        +b("input")(type="text" name="width" required).input._ruler#width
+        .form-validation__group
+          +b("input")(type="text" name="width").input._ruler#width.validation._digits
       +e.col._45._pull
         +b.label Тип ограждения:
         +b.custom-select
@@ -76,11 +80,12 @@ mixin calculation-form()
             +e("span").text Нет
       +e.col
         +label("text", "Дополнительные сведения")
-        +b("textarea")(name="text" required).input._textarea#text
+        .form-validation__group
+          +b("textarea")(name="text").input._textarea#text.validation._minlength
       +e.col
         +label("file", "Прикрепите фото участка и (или) техническое задание")
         +b.input-file
-          +e("input")(type="file" name="file" multiple required).input#file
+          +e("input")(type="file" name="file" multiple).input#file.validation
           +e("label")(for="file").label
             +e("span").field
             +e.button Обзор

@@ -1,5 +1,9 @@
 mixin section-issues()
   +b("section").section-issues&attributes(attributes)
+    +e.search-block
+      +e.search-input-block
+        +label("search", "Введите ключевые слова в поисковое поле...")
+        +b("input")(type="text" name="search" id="search").input
     +e.main
       - var i = 1;
       each block in issues

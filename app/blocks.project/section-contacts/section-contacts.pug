@@ -4,22 +4,27 @@ mixin section-contacts()
       +b("h1").heading._line.__heading Контакты
     +e.content
       +e.form-container
-        +b("form")(action="#" method="post" autocomplete="off").form.__form
+        +b("form")(action="#" method="post" autocomplete="off").form.__form.form-validation
           +e.col._50
             +label("name", "Имя")._required-red
-            +b("input")(type="text" name="name" required).input._name#name.__input
+            .form-validation__group
+              +b("input")(type="text" name="name").input._name#name.__input.validation._minlength
           +e.col._50
             +label("email", "Email")._required-red
-            +b("input")(type="email" name="email" required).input._email#email.__input
+            .form-validation__group
+              +b("input")(type="email" name="email").input._email#email.__input.validation._email
           +e.col._50
             +label("phone", "Телефон")
-            +b("input")(type="text" name="phone" required).input._phone.mask._phone#phone.__input
+            .form-validation__group
+              +b("input")(type="text" name="phone").input._phone.mask._phone#phone.__input.validation
           +e.col._50
             +label("time", "Удобное время звонка")
-            +b("input")(type="text" name="time" required).input._time.mask._time#time.__input
+            .form-validation__group
+              +b("input")(type="text" name="time").input._time.mask._time#time.__input.validation._minlength
           +e.col
             +label("text", "Ваше сообщение")._required-red
-            +b("textarea")(name="text" required).input._textarea#text.__input
+            .form-validation__group
+              +b("textarea")(name="text").input._textarea#text.__input.validation._minlength
           +checkbox("Я согласен на <a href=\"#\">обработку персональных данных</a>").__checkbox
           +e.button-container._right
             +b("input")(type="submit" value="Заказать").button._yellow

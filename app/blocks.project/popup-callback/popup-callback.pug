@@ -1,13 +1,17 @@
 mixin popup-callback()
   +b.popup-callback.zoom-anim-dialog.mfp-hide#popup-callback&attributes(attributes)
-    +e("form")(action="#" method="post" autocomplete="off").form
+    +e("form")(action="#" method="post" autocomplete="off").form.form-validation
       +label("popup-name", "Имя")._required-red
-      +b("input")(type="text" name="name" required).input._name#popup-name.__label
+      .form-validation__group
+        +b("input")(type="text" name="name").input._name#popup-name.__label.validation._minlength
       +label("popup-email", "Email")._required-red
-      +b("input")(type="email" name="email" required).input._email#popup-email.__label
+      .form-validation__group
+        +b("input")(type="email" name="email").input._email#popup-email.__label.validation._email
       +label("popup-phone", "Телефон")
-      +b("input")(type="text" name="phone" required).input._phone.mask._phone#popup-phone.__label
+      .form-validation__group
+        +b("input")(type="text" name="phone").input._phone.mask._phone#popup-phone.__label.validation
       +label("popup-text", "Ваше сообщение")._required-red
-      +b("textarea")(name="text" required).input._textarea#popup-text
+      .form-validation__group
+        +b("textarea")(name="text").input._textarea#popup-text.validation._minlength
       +e.button-container
         +b("input")(type="submit" value="Отправить").button._yellow

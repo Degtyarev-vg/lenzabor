@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
@@ -534,27 +534,35 @@
       </section>
       <div class="calculation-form">
         <h3 class="calculation-form__title">Расчитать стоимость забора </h3>
-        <form class="calculation-form__form" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+        <form class="calculation-form__form form-validation" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
           <div class="calculation-form__col calculation-form__col_4">
             <label class="label label_required-red" for="name">
               <span class="label__text">Имя</span>
             </label>
-            <input class="input input_name" type="text" name="name" required="required" id="name" /> </div>
+            <div class="form-validation__group">
+              <input class="input input_name validation validation_minlength" type="text" name="name" id="name" /> </div>
+          </div>
           <div class="calculation-form__col calculation-form__col_4">
             <label class="label label_required-red" for="email">
               <span class="label__text">Email</span>
             </label>
-            <input class="input input_email" type="email" name="email" required="required" id="email" /> </div>
+            <div class="form-validation__group">
+              <input class="input input_email validation validation_email" type="email" name="email" id="email" /> </div>
+          </div>
           <div class="calculation-form__col calculation-form__col_4">
             <label class="label" for="phone">
               <span class="label__text">Телефон</span>
             </label>
-            <input class="input input_phone mask mask_phone" type="text" name="phone" required="required" id="phone" /> </div>
+            <div class="form-validation__group">
+              <input class="input input_phone mask mask_phone validation" type="text" name="phone" id="phone" /> </div>
+          </div>
           <div class="calculation-form__col calculation-form__col_4 calculation-form__col_push">
             <label class="label" for="width">
               <span class="label__text">Метраж</span>
             </label>
-            <input class="input input_ruler" type="text" name="width" required="required" id="width" /> </div>
+            <div class="form-validation__group">
+              <input class="input input_ruler validation validation_digits" type="text" name="width" id="width" /> </div>
+          </div>
           <div class="calculation-form__col calculation-form__col_45 calculation-form__col_pull">
             <div class="label">Тип ограждения: </div>
             <div class="custom-select">
@@ -645,14 +653,16 @@
             <label class="label" for="text">
               <span class="label__text">Дополнительные сведения</span>
             </label>
-            <textarea class="input input_textarea" name="text" required="required" id="text"></textarea>
+            <div class="form-validation__group">
+              <textarea class="input input_textarea validation validation_minlength" name="text" id="text"></textarea>
+            </div>
           </div>
           <div class="calculation-form__col">
             <label class="label" for="file">
               <span class="label__text">Прикрепите фото участка и (или) техническое задание</span>
             </label>
             <div class="input-file">
-              <input class="input-file__input" type="file" name="file" multiple="multiple" required="required" id="file" />
+              <input class="input-file__input validation" type="file" name="file" multiple="multiple" id="file" />
               <label class="input-file__label" for="file">
                 <span class="input-file__field"></span>
                 <span class="input-file__button">Обзор</span>
@@ -795,32 +805,42 @@
                 <div class="form-price form-price_popup zoom-anim-dialog mfp-hide" id="package1">
                   <div class="form-price__container">
                     <h3 class="form-price__heading">Заполните форму </h3>
-                    <form class="form form-price__form" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+                    <form class="form form-price__form form-validation" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
                       <div class="form__col form__col_50">
                         <label class="label label_required-red" for="name1">
                           <span class="label__text">Имя</span>
                         </label>
-                        <input class="input input_name form__input" type="text" name="name" required="required" id="name1" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_name form__input validation validation_minlength" type="text" name="name" id="name1" /> </div>
+                      </div>
                       <div class="form__col form__col_50">
                         <label class="label" for="phone1">
                           <span class="label__text">Телефон</span>
                         </label>
-                        <input class="input input_phone mask mask_phone form__input" type="text" name="phone" required="required" id="phone1" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_phone mask mask_phone form__input validation" type="text" name="phone" id="phone1" /> </div>
+                      </div>
                       <div class="form__col form__col_50">
                         <label class="label label_required-red" for="email1">
                           <span class="label__text">Email</span>
                         </label>
-                        <input class="input input_email form__input" type="email" name="email" required="required" id="email1" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_email form__input validation validation_email" type="email" name="email" id="email1" /> </div>
+                      </div>
                       <div class="form__col form__col_50">
                         <label class="label label_required-gray" for="width1">
                           <span class="label__text">Длина забора, М.П.</span>
                         </label>
-                        <input class="input input_ruler form__input" type="text" name="width" required="required" id="width1" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_ruler form__input validation validation_digits" type="text" name="width" id="width1" /> </div>
+                      </div>
                       <div class="form__col">
                         <label class="label label_required-red" for="text1">
                           <span class="label__text">Ваше сообщение</span>
                         </label>
-                        <textarea class="input input_textarea form__input" name="text" required="required" id="text1"></textarea>
+                        <div class="form-validation__group">
+                          <textarea class="input input_textarea form__input validation validation_minlength" name="text" id="text1"></textarea>
+                        </div>
                       </div>
                       <div class="form__col">
                         <label class="label" for="file1">
@@ -877,32 +897,42 @@
                 <div class="form-price form-price_popup zoom-anim-dialog mfp-hide" id="package2">
                   <div class="form-price__container">
                     <h3 class="form-price__heading">Заполните форму </h3>
-                    <form class="form form-price__form" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+                    <form class="form form-price__form form-validation" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
                       <div class="form__col form__col_50">
                         <label class="label label_required-red" for="name2">
                           <span class="label__text">Имя</span>
                         </label>
-                        <input class="input input_name form__input" type="text" name="name" required="required" id="name2" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_name form__input validation validation_minlength" type="text" name="name" id="name2" /> </div>
+                      </div>
                       <div class="form__col form__col_50">
                         <label class="label" for="phone2">
                           <span class="label__text">Телефон</span>
                         </label>
-                        <input class="input input_phone mask mask_phone form__input" type="text" name="phone" required="required" id="phone2" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_phone mask mask_phone form__input validation" type="text" name="phone" id="phone2" /> </div>
+                      </div>
                       <div class="form__col form__col_50">
                         <label class="label label_required-red" for="email2">
                           <span class="label__text">Email</span>
                         </label>
-                        <input class="input input_email form__input" type="email" name="email" required="required" id="email2" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_email form__input validation validation_email" type="email" name="email" id="email2" /> </div>
+                      </div>
                       <div class="form__col form__col_50">
                         <label class="label label_required-gray" for="width2">
                           <span class="label__text">Длина забора, М.П.</span>
                         </label>
-                        <input class="input input_ruler form__input" type="text" name="width" required="required" id="width2" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_ruler form__input validation validation_digits" type="text" name="width" id="width2" /> </div>
+                      </div>
                       <div class="form__col">
                         <label class="label label_required-red" for="text2">
                           <span class="label__text">Ваше сообщение</span>
                         </label>
-                        <textarea class="input input_textarea form__input" name="text" required="required" id="text2"></textarea>
+                        <div class="form-validation__group">
+                          <textarea class="input input_textarea form__input validation validation_minlength" name="text" id="text2"></textarea>
+                        </div>
                       </div>
                       <div class="form__col">
                         <label class="label" for="file2">
@@ -960,32 +990,42 @@
                 <div class="form-price form-price_popup zoom-anim-dialog mfp-hide" id="package3">
                   <div class="form-price__container">
                     <h3 class="form-price__heading">Заполните форму </h3>
-                    <form class="form form-price__form" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+                    <form class="form form-price__form form-validation" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
                       <div class="form__col form__col_50">
                         <label class="label label_required-red" for="name3">
                           <span class="label__text">Имя</span>
                         </label>
-                        <input class="input input_name form__input" type="text" name="name" required="required" id="name3" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_name form__input validation validation_minlength" type="text" name="name" id="name3" /> </div>
+                      </div>
                       <div class="form__col form__col_50">
                         <label class="label" for="phone3">
                           <span class="label__text">Телефон</span>
                         </label>
-                        <input class="input input_phone mask mask_phone form__input" type="text" name="phone" required="required" id="phone3" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_phone mask mask_phone form__input validation" type="text" name="phone" id="phone3" /> </div>
+                      </div>
                       <div class="form__col form__col_50">
                         <label class="label label_required-red" for="email3">
                           <span class="label__text">Email</span>
                         </label>
-                        <input class="input input_email form__input" type="email" name="email" required="required" id="email3" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_email form__input validation validation_email" type="email" name="email" id="email3" /> </div>
+                      </div>
                       <div class="form__col form__col_50">
                         <label class="label label_required-gray" for="width3">
                           <span class="label__text">Длина забора, М.П.</span>
                         </label>
-                        <input class="input input_ruler form__input" type="text" name="width" required="required" id="width3" /> </div>
+                        <div class="form-validation__group">
+                          <input class="input input_ruler form__input validation validation_digits" type="text" name="width" id="width3" /> </div>
+                      </div>
                       <div class="form__col">
                         <label class="label label_required-red" for="text3">
                           <span class="label__text">Ваше сообщение</span>
                         </label>
-                        <textarea class="input input_textarea form__input" name="text" required="required" id="text3"></textarea>
+                        <div class="form-validation__group">
+                          <textarea class="input input_textarea form__input validation validation_minlength" name="text" id="text3"></textarea>
+                        </div>
                       </div>
                       <div class="form__col">
                         <label class="label" for="file3">
@@ -1223,25 +1263,31 @@
             document.write(new Date().getFullYear())
           </script>.</div>
       </div>
+      <a class="to-top" href="#"></a>
     </footer>
     <div class="popup-callback zoom-anim-dialog mfp-hide" id="popup-callback">
-      <form class="popup-callback__form" action="#" method="post" autocomplete="off">
+      <form class="popup-callback__form form-validation" action="#" method="post" autocomplete="off">
         <label class="label label_required-red" for="popup-name">
           <span class="label__text">Имя</span>
         </label>
-        <input class="input input_name popup-callback__label" type="text" name="name" required="required" id="popup-name" />
+        <div class="form-validation__group">
+          <input class="input input_name popup-callback__label validation validation_minlength" type="text" name="name" id="popup-name" /> </div>
         <label class="label label_required-red" for="popup-email">
           <span class="label__text">Email</span>
         </label>
-        <input class="input input_email popup-callback__label" type="email" name="email" required="required" id="popup-email" />
+        <div class="form-validation__group">
+          <input class="input input_email popup-callback__label validation validation_email" type="email" name="email" id="popup-email" /> </div>
         <label class="label" for="popup-phone">
           <span class="label__text">Телефон</span>
         </label>
-        <input class="input input_phone mask mask_phone popup-callback__label" type="text" name="phone" required="required" id="popup-phone" />
+        <div class="form-validation__group">
+          <input class="input input_phone mask mask_phone popup-callback__label validation" type="text" name="phone" id="popup-phone" /> </div>
         <label class="label label_required-red" for="popup-text">
           <span class="label__text">Ваше сообщение</span>
         </label>
-        <textarea class="input input_textarea" name="text" required="required" id="popup-text"></textarea>
+        <div class="form-validation__group">
+          <textarea class="input input_textarea validation validation_minlength" name="text" id="popup-text"></textarea>
+        </div>
         <div class="popup-callback__button-container">
           <input class="button button_yellow" type="submit" value="Отправить" /> </div>
       </form>

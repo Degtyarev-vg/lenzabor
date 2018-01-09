@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  // Magnific Popup
-  //$(".popup-with-move-anim").magnificPopup({
   $(".popup-with-zoom-anim").magnificPopup({
     type: "inline",
 
@@ -15,8 +13,22 @@ $(document).ready(function() {
 
     midClick: true,
     removalDelay: 300,
-    //mainClass: "my-mfp-slide-bottom"
-    mainClass: "my-mfp-zoom-in"
+    mainClass: "my-mfp-zoom-in",
+
+    callbacks: {
+      open: function() {
+        let thisElem = $(this.currItem.src);
+
+        setTimeout(function() {
+          thisElem.find("input:not([type=submit])").each(function() {
+            if($(this).val() === "") {
+              $(this).focus();
+              return false;
+            }
+          });
+        }, 500);
+      }
+    }
   });
 
 });

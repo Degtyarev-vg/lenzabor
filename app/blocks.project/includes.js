@@ -19,3 +19,5 @@
 //= include link-scroll/link-scroll.js
 //= include visualizer/visualizer.js
 //= include section-gallery/section-gallery.js
+//= include validation/validation.js
+//= include to-top/to-top.js

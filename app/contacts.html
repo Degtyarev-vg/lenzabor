@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
@@ -144,32 +144,42 @@
         </div>
         <div class="section-contacts__content">
           <div class="section-contacts__form-container">
-            <form class="form section-contacts__form" action="#" method="post" autocomplete="off">
+            <form class="form section-contacts__form form-validation" action="#" method="post" autocomplete="off">
               <div class="form__col form__col_50">
                 <label class="label label_required-red" for="name">
                   <span class="label__text">Имя</span>
                 </label>
-                <input class="input input_name form__input" type="text" name="name" required="required" id="name" /> </div>
+                <div class="form-validation__group">
+                  <input class="input input_name form__input validation validation_minlength" type="text" name="name" id="name" /> </div>
+              </div>
               <div class="form__col form__col_50">
                 <label class="label label_required-red" for="email">
                   <span class="label__text">Email</span>
                 </label>
-                <input class="input input_email form__input" type="email" name="email" required="required" id="email" /> </div>
+                <div class="form-validation__group">
+                  <input class="input input_email form__input validation validation_email" type="email" name="email" id="email" /> </div>
+              </div>
               <div class="form__col form__col_50">
                 <label class="label" for="phone">
                   <span class="label__text">Телефон</span>
                 </label>
-                <input class="input input_phone mask mask_phone form__input" type="text" name="phone" required="required" id="phone" /> </div>
+                <div class="form-validation__group">
+                  <input class="input input_phone mask mask_phone form__input validation" type="text" name="phone" id="phone" /> </div>
+              </div>
               <div class="form__col form__col_50">
                 <label class="label" for="time">
                   <span class="label__text">Удобное время звонка</span>
                 </label>
-                <input class="input input_time mask mask_time form__input" type="text" name="time" required="required" id="time" /> </div>
+                <div class="form-validation__group">
+                  <input class="input input_time mask mask_time form__input validation validation_minlength" type="text" name="time" id="time" /> </div>
+              </div>
               <div class="form__col">
                 <label class="label label_required-red" for="text">
                   <span class="label__text">Ваше сообщение</span>
                 </label>
-                <textarea class="input input_textarea form__input" name="text" required="required" id="text"></textarea>
+                <div class="form-validation__group">
+                  <textarea class="input input_textarea form__input validation validation_minlength" name="text" id="text"></textarea>
+                </div>
               </div>
               <label class="checkbox form__checkbox">
                 <input class="checkbox__input" type="checkbox" hidden="hidden" />
@@ -368,6 +378,7 @@
             document.write(new Date().getFullYear())
           </script>.</div>
       </div>
+      <a class="to-top" href="#"></a>
     </footer>
     <link href="css/style.min.css" rel="stylesheet" />
     <script src="js/libs.min.js"></script>

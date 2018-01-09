@@ -1,0 +1,44 @@
+// Для импорта в файл подключения: @import "./app/blocks.project/to-top/to-top.less";
+
+@import "../../less/_vars";     // файл с переменными
+@import "../../less/_png-sprite";    // файл с png-спрайтами
+
+
+.to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1000;
+  box-sizing: border-box;
+  display: none;
+  opacity: 1;
+  height: 40px;
+  width: 40px;
+  border: #ec4b25 4px solid;
+  border-radius: 50%;
+  transition: all ease 0.35s;
+  @media (max-width: 991px) {
+    bottom: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20id%3D%22svg10%22%20viewBox%3D%220%200%201548%201548%22%20height%3D%2222%22%20width%3D%2222%22%20shape-rendering%3D%22geometricPrecision%22%20text-rendering%3D%22geometricPrecision%22%20image-rendering%3D%22optimizeQuality%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%3E%3Cdefs%20id%3D%22defs4%22%3E%3Cstyle%20id%3D%22style2%22%3E.fil0%7Bfill%3A%23ec4b25%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22%D0%A1%D0%BB%D0%BE%D0%B9_x0020_1%22%3E%3Cpath%20id%3D%22path7%22%20d%3D%22M774%200c427%200%20774%20346%20774%20774%200%20427-347%20774-774%20774-428%200-774-347-774-774C0%20346%20346%200%20774%200zm111%20412l456%20721-217%204-350-549-350%20549-217-4%20455-721-1-1h225l-1%201z%22%20class%3D%22fil0%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center no-repeat;/* Цвет ec4b25 - найти и заменить */
+    background-size: contain;
+    @media (max-width: 991px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
