@@ -41,6 +41,7 @@
     width: 100%;
     transition: @transition;
     opacity: 0;
+    z-index: 2;
   }
 
   &__excerpt-inner {
@@ -68,6 +69,24 @@
     justify-content: center;
     height: 253px;
     padding: 20px 17px;
+    position: relative;
+  }
+
+  &__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+  &__source, &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
   }
 
   &__title {
@@ -76,6 +95,8 @@
     font-weight: normal;
     font-size: 19px;
     line-height: 21px;
+    position: relative;
+    z-index: 1;
     &_white {
       color: #ffffff;
     }

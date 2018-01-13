@@ -14,7 +14,10 @@ mixin section-services()
                     +e.excerpt-inner
                       +e("h4").title._black !{item.title}
                       +e("p").description._excerpt !{item.description}
-                  +e.top(style="background:url('img/services/" + item.img + "');background-size:cover")
+                  +e.top
+                    +e("picture").picture
+                      +e("source")(type="image/webp" srcset="img/services/"+item.imgWebp+" 1x, img/services/"+item.imgWebpRetina+" 2x").source
+                      +e("img")(src="img/services/"+item.img srcset="img/services/"+item.imgRetina+" 2x" alt=item.title).img
                     +e("h4").title._white !{item.title}
                   +e.bottom
                     +e("p").description._bottom !{item.descriptionSm}
