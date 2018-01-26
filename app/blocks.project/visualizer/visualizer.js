@@ -89,12 +89,132 @@ $(function() {
 
         if ( $(this).find("a").attr("href") == "s2" ) {
           $(".visualizer")
-              .removeClass("visualizer__box_s4")
+              .removeClass("visualizer__box_s4 visualizer__box_s1 visualizer__box_s3")
               .addClass("visualizer__box_s2");
+
+          if ( $(".visualizer-control__drop-button_view").attr("href") != "v1t3" ) {
+            $(".visualizer__controls")
+              .find(".visualizer-control__drop-link[href='o2']")
+              .css("display", "block");
+          }
+
+          $(".visualizer_shtaket .visualizer-control__drop-link[href='r1']")
+            .click();
+          $(".visualizer_shtaket .visualizer-control__drop-link[href='r2']")
+            .css("display", "none");
+        } else if ($(this).find("a").attr("href")=="s1") {
+          $(".visualizer")
+            .removeClass("visualizer__box_s2 visualizer__box_s3")
+            .addClass("visualizer__box_s1");
+
+          if ( $(".visualizer-control__drop-button_view").attr("href") != "v1t3" ) {
+            $(".visualizer__controls")
+              .find(".visualizer-control__drop-link[href='o2']")
+              .css("display", "block");
+          }
+
+          $(".visualizer-control__drop-link[href='r2']")
+            .css("display", "block");
         } else if ($(this).find("a").attr("href")=="s4") {
           $(".visualizer")
               .removeClass("visualizer__box_s2")
               .addClass("visualizer__box_s4");
+        } else if ($(this).find("a").attr("href")=="s3") {
+          $(".visualizer")
+            .removeClass("visualizer__box_s1 visualizer__box_s2")
+            .addClass("visualizer__box_s3");
+
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o1']")
+            .click();
+
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o2']")
+            .css("display", "none");
+
+          $(".visualizer-control__drop-link[href='r1']")
+            .click();
+          $(".visualizer-control__drop-link[href='r2']")
+            .css("display", "none");
+        };
+
+        if ( $(this).find("a").attr("href") == "v1t1" ) {
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='s1']")
+            .click();
+
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='s3']")
+            .css("display", "none");
+
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o1']")
+            .css("display", "block");
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o2']")
+            .css("display", "block");
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o3']")
+            .css("display", "none");
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o1']")
+            .click();
+        } else if ( $(this).find("a").attr("href") == "v1t3" ) {
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='s1']")
+            .click();
+
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='s3']")
+            .css("display", "none");
+
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o1']")
+            .css("display", "none");
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o2']")
+            .css("display", "none");
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o3']")
+            .css("display", "block");
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o3']")
+            .click();
+        } else if ( $(this).find("a").attr("href") == "v1t2" ) {
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='s3']")
+            .css("display", "block");
+
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o1']")
+            .css("display", "block");
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o2']")
+            .css("display", "block");
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o3']")
+            .css("display", "none");
+          $(".visualizer__controls")
+            .find(".visualizer-control__drop-link[href='o1']")
+            .click();
+        }
+
+        if ( $(this).find("a").attr("href") == "o1" ) {
+          $(".visualizer__box")
+              .removeClass("visualizer__box_o4 visualizer__box_o2 visualizer__box_o3")
+              .addClass("visualizer__box_o1");
+        } else if ( $(this).find("a").attr("href") == "o2" ) {
+          $(".visualizer__box")
+            .removeClass("visualizer__box_o1 visualizer__box_o3")
+            .addClass("visualizer__box_o2");
+        } else if ( $(this).find("a").attr("href") == "o3" ) {
+          $(".visualizer__box")
+            .removeClass("visualizer__box_o1 visualizer__box_o2")
+            .addClass("visualizer__box_o3");
+        } else if ($(this).find("a").attr("href")=="o4") {
+          $(".visualizer__box")
+              .removeClass("visualizer__box_o1")
+              .addClass("visualizer__box_o4");
         };
 
         changeFence();
@@ -110,7 +230,7 @@ $(function() {
     return false;
   });
 
-
+  $(".visualizer-control__drop-button_shtaket").click().click();
 
   $(document).click(function(event) {
     if ( $(event.target).closest(".visualizer-control__drop-list").length ) return;

@@ -47,7 +47,7 @@ html(lang="ru")
                       +e("a")(href="r1").drop-link Вид снаружи
                     +e('li').drop-item
                       +e("a")(href="r2").drop-link Вид изнутри
-              +e.control-item
+              +e.control-item._hidden
                 +b.label Вид штакетника:
                 +b.visualizer-control
                   +e("a")(href="v2t1").drop-button Доска 120*10 мм
@@ -63,22 +63,13 @@ html(lang="ru")
                       +e("a")(href="s2").drop-link Верт. в шахм. порядке
                     +e('li').drop-item
                       +e("a")(href="s4").drop-link Плетенка
-              +e.control-item
+              +e.control-item._hidden
                 +b.label Вид обрезки:
                 +b.visualizer-control
                   +e("a")(href="o1").drop-button Прямая
                   +e("ul").drop-list
                     +e("li").drop-item._selected
                       +e("a")(href="o1").drop-link Прямая
-              //-+e.control-item._hidden
-                +b.label Цвет:
-                +b.visualizer-control._colors
-                  +e("a")(href="colha").drop-button Ольха
-                  +e("ul").drop-list
-                    +e("li").drop-item._selected
-                      +e("a")(href="colha").drop-link Ольха
-                    +e("li").drop-item
-                      +e("a")(href="coreh").drop-link Орех
 
             +e.box._front._s2
               +e.fence

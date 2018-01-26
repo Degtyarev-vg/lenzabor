@@ -696,23 +696,23 @@
 			"subMenu": {
 				"subItem1": {
 					"text": "Из штакетника",
-					"link": "#"
+					"link": "inner-shtaket.html"
 				},
 				"subItem2": {
 					"text": "Из профлиста",
-					"link": "#"
+					"link": "inner-proflist.html"
 				},
 				"subItem3": {
 					"text": "Из сетки 3D",
-					"link": "#"
+					"link": "inner-proflist.html"
 				},
 				"subItem4": {
 					"text": "Из сетки рабицы",
-					"link": "#"
+					"link": "inner-gitter.html"
 				},
 				"subItem5": {
 					"text": "Из дерева",
-					"link": "#"
+					"link": "inner.html"
 				}
 			}
 		},
@@ -736,15 +736,15 @@
 			"subMenu": {
 				"subItem1": {
 					"text": "Заборы из профнастила",
-					"link": "#"
+					"link": "gallery.html"
 				},
 				"subItem2": {
 					"text": "Заборы из Gittera",
-					"link": "#"
+					"link": "gallery.html"
 				},
 				"subItem3": {
 					"text": "Заборы из штакетника",
-					"link": "#"
+					"link": "gallery.html"
 				}
 			}
 		},
@@ -758,13 +758,13 @@
 				},
 				"subItem2": {
 					"text": "Калькулятор",
-					"link": "#"
+					"link": "calculator.html"
 				}
 			}
 		},
 		"item6": {
 			"text": "Контакты",
-			"link": "#"
+			"link": "contacts.html"
 		}
 	}
 }
