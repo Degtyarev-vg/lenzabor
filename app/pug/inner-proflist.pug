@@ -27,47 +27,6 @@ html(lang="ru")
           //- ВИЗУАЛИЗАТОР --- START
           +b.visualizer
             +e.hidden
-              +e("img")(src="img/visualizer/back.jpg")
-              +e("img")(src="img/visualizer/2/r1v3t1s1o1c3005.png")
-              +e("img")(src="img/visualizer/2/r1v3t1s1o1c6005.png")
-              +e("img")(src="img/visualizer/2/r1v3t1s1o1c8017.png")
-              +e("img")(src="img/visualizer/2/r1v3t1s1o1cstone.png")
-              +e("img")(src="img/visualizer/2/r1v3t1s1o1cwood.png")
-              +e("img")(src="img/visualizer/2/r1v3t1s1o4c3005.png")
-              +e("img")(src="img/visualizer/2/r1v3t1s1o4c6005.png")
-              +e("img")(src="img/visualizer/2/r1v3t1s1o4c8017.png")
-              +e("img")(src="img/visualizer/2/r1v3t1s1o4cstone.png")
-              +e("img")(src="img/visualizer/2/r1v3t1s1o4cwood.png")
-              +e("img")(src="img/visualizer/2/r1v3t2s1o1c3005.png")
-              +e("img")(src="img/visualizer/2/r1v3t2s1o1c6005.png")
-              +e("img")(src="img/visualizer/2/r1v3t2s1o1c8017.png")
-              +e("img")(src="img/visualizer/2/r1v3t2s1o1cstone.png")
-              +e("img")(src="img/visualizer/2/r1v3t2s1o1cwood.png")
-              +e("img")(src="img/visualizer/2/r1v3t2s1o4c3005.png")
-              +e("img")(src="img/visualizer/2/r1v3t2s1o4c6005.png")
-              +e("img")(src="img/visualizer/2/r1v3t2s1o4c8017.png")
-              +e("img")(src="img/visualizer/2/r1v3t2s1o4cstone.png")
-              +e("img")(src="img/visualizer/2/r1v3t2s1o4cwood.png")
-              +e("img")(src="img/visualizer/2/r2v3t1s1o1c3005.png")
-              +e("img")(src="img/visualizer/2/r2v3t1s1o1c6005.png")
-              +e("img")(src="img/visualizer/2/r2v3t1s1o1c8017.png")
-              +e("img")(src="img/visualizer/2/r2v3t1s1o1cstone.png")
-              +e("img")(src="img/visualizer/2/r2v3t1s1o1cwood.png")
-              +e("img")(src="img/visualizer/2/r2v3t1s1o4c3005.png")
-              +e("img")(src="img/visualizer/2/r2v3t1s1o4c6005.png")
-              +e("img")(src="img/visualizer/2/r2v3t1s1o4c8017.png")
-              +e("img")(src="img/visualizer/2/r2v3t1s1o4cstone.png")
-              +e("img")(src="img/visualizer/2/r2v3t1s1o4cwood.png")
-              +e("img")(src="img/visualizer/2/r2v3t2s1o1c3005.png")
-              +e("img")(src="img/visualizer/2/r2v3t2s1o1c6005.png")
-              +e("img")(src="img/visualizer/2/r2v3t2s1o1c8017.png")
-              +e("img")(src="img/visualizer/2/r2v3t2s1o1cstone.png")
-              +e("img")(src="img/visualizer/2/r2v3t2s1o1cwood.png")
-              +e("img")(src="img/visualizer/2/r2v3t2s1o4c3005.png")
-              +e("img")(src="img/visualizer/2/r2v3t2s1o4c6005.png")
-              +e("img")(src="img/visualizer/2/r2v3t2s1o4c8017.png")
-              +e("img")(src="img/visualizer/2/r2v3t2s1o4cstone.png")
-              +e("img")(src="img/visualizer/2/r2v3t2s1o4cwood.png")
 
             +e.controls(data-folder="2")
               +e.control-item
@@ -214,3 +173,16 @@ html(lang="ru")
     +footer(false).__footer
 
     +popup-callback
+
+    script.
+      window.onload = function() {
+        var container = document.querySelector(".visualizer__hidden");
+
+        var vizualizerImages = ["img/visualizer/back.jpg", "img/visualizer/2/r1v3t1s1o1c3005.png", "img/visualizer/2/r1v3t1s1o1c6005.png", "img/visualizer/2/r1v3t1s1o1c8017.png", "img/visualizer/2/r1v3t1s1o1cstone.png", "img/visualizer/2/r1v3t1s1o1cwood.png", "img/visualizer/2/r1v3t1s1o4c3005.png", "img/visualizer/2/r1v3t1s1o4c6005.png", "img/visualizer/2/r1v3t1s1o4c8017.png", "img/visualizer/2/r1v3t1s1o4cstone.png", "img/visualizer/2/r1v3t1s1o4cwood.png", "img/visualizer/2/r1v3t2s1o1c3005.png", "img/visualizer/2/r1v3t2s1o1c6005.png", "img/visualizer/2/r1v3t2s1o1c8017.png", "img/visualizer/2/r1v3t2s1o1cstone.png", "img/visualizer/2/r1v3t2s1o1cwood.png", "img/visualizer/2/r1v3t2s1o4c3005.png", "img/visualizer/2/r1v3t2s1o4c6005.png", "img/visualizer/2/r1v3t2s1o4c8017.png", "img/visualizer/2/r1v3t2s1o4cstone.png", "img/visualizer/2/r1v3t2s1o4cwood.png", "img/visualizer/2/r2v3t1s1o1c3005.png", "img/visualizer/2/r2v3t1s1o1c6005.png", "img/visualizer/2/r2v3t1s1o1c8017.png", "img/visualizer/2/r2v3t1s1o1cstone.png", "img/visualizer/2/r2v3t1s1o1cwood.png", "img/visualizer/2/r2v3t1s1o4c3005.png", "img/visualizer/2/r2v3t1s1o4c6005.png", "img/visualizer/2/r2v3t1s1o4c8017.png", "img/visualizer/2/r2v3t1s1o4cstone.png", "img/visualizer/2/r2v3t1s1o4cwood.png", "img/visualizer/2/r2v3t2s1o1c3005.png", "img/visualizer/2/r2v3t2s1o1c6005.png", "img/visualizer/2/r2v3t2s1o1c8017.png", "img/visualizer/2/r2v3t2s1o1cstone.png", "img/visualizer/2/r2v3t2s1o1cwood.png", "img/visualizer/2/r2v3t2s1o4c3005.png", "img/visualizer/2/r2v3t2s1o4c6005.png", "img/visualizer/2/r2v3t2s1o4c8017.png", "img/visualizer/2/r2v3t2s1o4cstone.png", "img/visualizer/2/r2v3t2s1o4cwood.png"];
+
+        vizualizerImages.forEach(function(src) {
+          var myImage = new Image();
+          myImage.src = src;
+          container.appendChild(myImage);
+        });
+      }

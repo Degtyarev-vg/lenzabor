@@ -355,5 +355,4 @@ $(function() {
   });
   // Tooltip END
 
-
 });

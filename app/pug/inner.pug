@@ -27,15 +27,6 @@ html(lang="ru")
           //- ВИЗУАЛИЗАТОР --- START
           +b.visualizer
             +e.hidden
-              +e("img")(src="img/visualizer/back.jpg")
-              +e("img")(src="img/visualizer/1/r1v2t1s2o1colha.png")
-              +e("img")(src="img/visualizer/1/r1v2t1s2o1coreh.png")
-              +e("img")(src="img/visualizer/1/r1v2t1s4o1colha.png")
-              +e("img")(src="img/visualizer/1/r1v2t1s4o1coreh.png")
-              +e("img")(src="img/visualizer/1/r2v2t1s2o1colha.png")
-              +e("img")(src="img/visualizer/1/r2v2t1s2o1coreh.png")
-              +e("img")(src="img/visualizer/1/r2v2t1s4o1colha.png")
-              +e("img")(src="img/visualizer/1/r2v2t1s4o1coreh.png")
 
             +e.controls(data-folder="1")
               +e.control-item
@@ -169,3 +160,16 @@ html(lang="ru")
     +footer(false).__footer
 
     +popup-callback
+
+    script.
+      window.onload = function() {
+        var container = document.querySelector(".visualizer__hidden");
+
+        var vizualizerImages = ["img/visualizer/back.jpg", "img/visualizer/1/r1v2t1s2o1colha.png", "img/visualizer/1/r1v2t1s2o1coreh.png", "img/visualizer/1/r1v2t1s4o1colha.png", "img/visualizer/1/r1v2t1s4o1coreh.png", "img/visualizer/1/r2v2t1s2o1colha.png", "img/visualizer/1/r2v2t1s2o1coreh.png", "img/visualizer/1/r2v2t1s4o1colha.png", "img/visualizer/1/r2v2t1s4o1coreh.png"];
+
+        vizualizerImages.forEach(function(src) {
+          var myImage = new Image();
+          myImage.src = src;
+          container.appendChild(myImage);
+        });
+      }

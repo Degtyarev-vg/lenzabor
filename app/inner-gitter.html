@@ -232,16 +232,7 @@
         </div>
         <div class="grid grid_no-sm-padding">
           <div class="visualizer">
-            <div class="visualizer__hidden">
-              <img src="img/visualizer/back.jpg" alt="" />
-              <img src="img/visualizer/3/r1v4t1s5o1c6005.png" alt="" />
-              <img src="img/visualizer/3/r1v4t1s5o1c8017.png" alt="" />
-              <img src="img/visualizer/3/r1v4t2s5o1c6005.png" alt="" />
-              <img src="img/visualizer/3/r1v4t2s5o1c8017.png" alt="" />
-              <img src="img/visualizer/3/r2v4t1s5o1c6005.png" alt="" />
-              <img src="img/visualizer/3/r2v4t1s5o1c8017.png" alt="" />
-              <img src="img/visualizer/3/r2v4t2s5o1c6005.png" alt="" />
-              <img src="img/visualizer/3/r2v4t2s5o1c8017.png" alt="" /> </div>
+            <div class="visualizer__hidden"> </div>
             <div class="visualizer__controls" data-folder="3">
               <div class="visualizer__control-item">
                 <div class="label">Ракурс: </div>
@@ -1271,6 +1262,19 @@
           <input class="button button_yellow" type="submit" value="Отправить" /> </div>
       </form>
     </div>
+    <script>
+      window.onload = function()
+      {
+        var container = document.querySelector(".visualizer__hidden");
+        var vizualizerImages = ["img/visualizer/back.jpg", "img/visualizer/3/r1v4t1s5o1c6005.png", "img/visualizer/3/r1v4t1s5o1c8017.png", "img/visualizer/3/r1v4t2s5o1c6005.png", "img/visualizer/3/r1v4t2s5o1c8017.png", "img/visualizer/3/r2v4t1s5o1c6005.png", "img/visualizer/3/r2v4t1s5o1c8017.png", "img/visualizer/3/r2v4t2s5o1c6005.png", "img/visualizer/3/r2v4t2s5o1c8017.png"];
+        vizualizerImages.forEach(function(src)
+        {
+          var myImage = new Image();
+          myImage.src = src;
+          container.appendChild(myImage);
+        });
+      }
+    </script>
     <link href="css/style.min.css" rel="stylesheet" />
     <script src="js/libs.min.js"></script>
     <script src="js/blocks.min.js"></script>

@@ -232,16 +232,7 @@
         </div>
         <div class="grid grid_no-sm-padding">
           <div class="visualizer">
-            <div class="visualizer__hidden">
-              <img src="img/visualizer/back.jpg" alt="" />
-              <img src="img/visualizer/1/r1v2t1s2o1colha.png" alt="" />
-              <img src="img/visualizer/1/r1v2t1s2o1coreh.png" alt="" />
-              <img src="img/visualizer/1/r1v2t1s4o1colha.png" alt="" />
-              <img src="img/visualizer/1/r1v2t1s4o1coreh.png" alt="" />
-              <img src="img/visualizer/1/r2v2t1s2o1colha.png" alt="" />
-              <img src="img/visualizer/1/r2v2t1s2o1coreh.png" alt="" />
-              <img src="img/visualizer/1/r2v2t1s4o1colha.png" alt="" />
-              <img src="img/visualizer/1/r2v2t1s4o1coreh.png" alt="" /> </div>
+            <div class="visualizer__hidden"> </div>
             <div class="visualizer__controls" data-folder="1">
               <div class="visualizer__control-item">
                 <div class="label">Ракурс: </div>
@@ -1292,6 +1283,19 @@
           <input class="button button_yellow" type="submit" value="Отправить" /> </div>
       </form>
     </div>
+    <script>
+      window.onload = function()
+      {
+        var container = document.querySelector(".visualizer__hidden");
+        var vizualizerImages = ["img/visualizer/back.jpg", "img/visualizer/1/r1v2t1s2o1colha.png", "img/visualizer/1/r1v2t1s2o1coreh.png", "img/visualizer/1/r1v2t1s4o1colha.png", "img/visualizer/1/r1v2t1s4o1coreh.png", "img/visualizer/1/r2v2t1s2o1colha.png", "img/visualizer/1/r2v2t1s2o1coreh.png", "img/visualizer/1/r2v2t1s4o1colha.png", "img/visualizer/1/r2v2t1s4o1coreh.png"];
+        vizualizerImages.forEach(function(src)
+        {
+          var myImage = new Image();
+          myImage.src = src;
+          container.appendChild(myImage);
+        });
+      }
+    </script>
     <link href="css/style.min.css" rel="stylesheet" />
     <script src="js/libs.min.js"></script>
     <script src="js/blocks.min.js"></script>
