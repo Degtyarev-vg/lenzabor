@@ -21,6 +21,8 @@ mixin section-gallery()
                     +e("a")(href=item.href).drop-link !{item.name}
                   - i++;
               +e("input")(type="hidden" name=filter.name value=filter.value).drop-hidden-input
+        +e.filter-reset
+          +b("a")(href="#" data-tooltip="Сбросить все фильтры?").button._yellow._icon-left.__button-reset.tooltip Сбросить
       +e.list
         each item in gallery
           +e.item
