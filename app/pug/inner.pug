@@ -124,20 +124,25 @@ html(lang="ru")
                   +e("p").circle-text Упоры для фиксации распашных ворот
 
             +e.buttons
-              +e("a")(href="colha" style="background:#A06F40 url(img/visualizer/1/colors/colha.jpg);color:#A06F40").color._active
-                +e("span").splash._first
-                  +iconsvg("splash_1")(width="20" height="37.690").splash-img
-                +e("span").splash._second
-                  +iconsvg("splash_2")(width="30" height="63.11").splash-img
-              +e("a")(href="coreh" style="background:#4E301A url(img/visualizer/1/colors/coreh.jpg);color:#4E301A").color
-                +e("span").splash._first
-                  +iconsvg("splash_1")(width="20" height="37.690").splash-img
-                +e("span").splash._second
-                  +iconsvg("splash_2")(width="30" height="63.11").splash-img
+              +e.color-button
+                +e("a")(href="colha" style="background:#A06F40 url(img/visualizer/1/colors/colha.jpg);color:#A06F40").color._active
+                  +e("span").splash._first
+                    +iconsvg("splash_1")(width="20" height="37.690").splash-img
+                  +e("span").splash._second
+                    +iconsvg("splash_2")(width="30" height="63.11").splash-img
+                +e("span").color-name 9010
+              +e.color-button
+                +e("a")(href="coreh" style="background:#4E301A url(img/visualizer/1/colors/coreh.jpg);color:#4E301A").color
+                  +e("span").splash._first
+                    +iconsvg("splash_1")(width="20" height="37.690").splash-img
+                  +e("span").splash._second
+                    +iconsvg("splash_2")(width="30" height="63.11").splash-img
+                +e("span").color-name 9002
           //- ВИЗУАЛИЗАТОР --- END
 
 
-      +section-colors
+      //- +section-colors
+      +infographic._inner
 
       +calculation-form
 

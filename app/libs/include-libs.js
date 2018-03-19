@@ -4,6 +4,6 @@
 //= include svg4everybody/svg4everybody.js
 //= include maskedinput/maskedinput.min.js
 //= include jquery-stickit/jquery-stickit.min.js
-//= include jquery.keypad/js/jquery.plugin.min.js
-//= include jquery.keypad/js/jquery.keypad.min.js
+//= include jquery.keypad/js/jquery.plugin.js
+//= include jquery.keypad/js/jquery.keypad.js
 //= include jquery.validate/jquery.validate.min.js

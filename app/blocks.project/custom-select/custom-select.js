@@ -19,7 +19,7 @@ $(function() {
 
         $(this).addClass("custom-select__drop-item_selected");
 
-        let selectResult = $(this).find("a").text(),
+        let selectResult = $(this).find("a").html(),
             selectValue = $(this).find("a").attr("href");
 
         $(this)

@@ -6,6 +6,18 @@
 
 .custom-select, .visualizer-control {
   position: relative;
+  &_color {
+    .custom-select__drop-list {
+      max-height: 400px;
+      overflow: auto;
+    }
+    .custom-select__drop-link {
+      padding: 11px 15px;
+      &:before {
+        display: none;
+      }
+    }
+  }
 
   &__drop-button {
     display: block;
@@ -41,6 +53,12 @@
       &:before {
         transform: translateY(-50%) rotate(-90deg);
       }
+    }
+    .custom-select__text {
+      padding-top: 5px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
   }
 
@@ -99,6 +117,22 @@
         background-size: contain;
       }
     }
+  }
+
+  &__color {
+    border: 3px solid #e2e2e2;
+    border-radius: 50%;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  &__text {
+    display: inline-block;
+    padding-top: 4px;
+    width: calc(~"100% - 40px");
   }
 
 }

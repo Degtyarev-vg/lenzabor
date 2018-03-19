@@ -57,6 +57,30 @@ mixin calculator-panel()
           +e.result-price
             +e("span").result-price-i._loading
             |  р.
+    +e.side._color
+      +b.label._no-left-offset.__label-color Цвет забора
+      +b.custom-select._color
+        +e("a")(href="javascript:void(0);").drop-button
+          +e("span").color(style="background:#ab0101")
+          +e("span").text RAL 9010
+        +e("ul").drop-list
+          +e("li").drop-item._selected
+            +e("a")(href="RAL9010").drop-link
+              +e("span").color(style="background:#ab0101")
+              +e("span").text RAL 9010
+          +e('li').drop-item
+            +e("a")(href="RAL9002").drop-link
+              +e("span").color(style="background:#592b1b")
+              +e("span").text RAL 9002 Lorem ipsum dolor sit amet.
+          +e('li').drop-item
+            +e("a")(href="RAL3011").drop-link
+              +e("span").color(style="background:#3562b7")
+              +e("span").text RAL 3011
+          +e('li').drop-item
+            +e("a")(href="9002").drop-link
+              +e("span").color(style="background:url('img/colors/2.jpg') center no-repeat; background-size:cover;")
+              +e("span").text 9002
+        +e("input")(type="hidden" name="color-side" value="RAL9010").drop-hidden-input
     +e.row
       +e("a")(href="#").add-side-btn <span>Добавить сторону</span>
       +e("a")(href="#").visualizer-btn <span>Визуализатор</span>

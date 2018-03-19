@@ -1,0 +1,16 @@
+mixin infographic()
+  +b.infographic&attributes(attributes)
+    .grid
+      +e.container
+        +e.dots
+        +e.slider
+          each item in infographic
+            +e.slide(data-thumb=item.dotImg data-text=item.dotText)
+              +e("h3").title !{item.title}
+              +e("p").text !{item.text}
+              +e("a")(href="#").button Посчитать забор
+              +e.img-container
+                +e(src="" + item.img alt="" + item.title).img
+              +e.arrows-container
+                +e.prev
+                +e.next

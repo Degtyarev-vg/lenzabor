@@ -798,10 +798,22 @@
   }
 
   &__buttons {
+    font-size: 0;
     text-align: center;
     margin-top: 25px;
     @media (max-width: 767px) {
       margin-top: 15px;
+    }
+  }
+
+  &__color-button {
+    display: inline-block;
+    margin-right: 20px;
+    @media (max-width: 767px) {
+      margin-right: 10px;
+    }
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 
@@ -813,7 +825,6 @@
     position: relative;
     height: 47px;
     width: 47px;
-    margin-right: 15px;
     transition: all ease 0.3s;
     z-index: 10;
     @media (max-width: 767px) {
@@ -900,6 +911,18 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  &__color-name {
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 8px;
+    color: #000000;
+    display: block;
+    @media (max-width: 767px) {
+      font-size: 10px;
+      line-height: 10px;
+    }
   }
 
   &__ios-switch-container {

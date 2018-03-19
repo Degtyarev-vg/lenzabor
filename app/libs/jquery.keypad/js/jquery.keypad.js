@@ -1,9 +1,9 @@
-﻿/* http://keith-wood.name/keypad.html
+/* http://keith-wood.name/keypad.html
    Keypad field entry extension for jQuery v2.1.0.
    Written by Keith Wood (kbwood{at}iinet.com.au) August 2008.
-   Available under the MIT (http://keith-wood.name/licence.html) license. 
+   Available under the MIT (http://keith-wood.name/licence.html) license.
    Please attribute the author if you use it. */
-   
+
 (function($) { // hide the namespace
 	'use strict';
 
@@ -26,7 +26,7 @@
 		/** The name of the plugin.
 			@default 'keypad' */
 		name: pluginName,
-		
+
 		/** Don't deep merge options - causes problems with arrays.
 			@default false */
 		deepMerge: false,
@@ -304,7 +304,7 @@
 					// pop-up keypad when button clicked
 					var buttonStatus = inst.options.buttonStatus;
 					var buttonImage = inst.options.buttonImage;
-					var trigger = $(inst.options.buttonImageOnly ? 
+					var trigger = $(inst.options.buttonImageOnly ?
 						$('<img src="' + buttonImage + '" alt="' +
 						buttonStatus + '" title="' + buttonStatus + '"/>') :
 					$('<button type="button" title="' + buttonStatus + '"></button>').
@@ -509,11 +509,11 @@
 			}
 			// reposition keypad panel vertically if outside the browser window
 			if ((offset.top + inst._mainDiv.outerHeight() - scrollY) > browserHeight) {
-				offset.top = Math.max((isFixed ? 0 : scrollY),
-					pos[1] - (isFixed ? scrollY : 0) - inst._mainDiv.outerHeight());
+				//offset.top = Math.max((isFixed ? 0 : scrollY),
+					//pos[1] - (isFixed ? scrollY : 0) - inst._mainDiv.outerHeight());
 			}
 			else {
-				offset.top = Math.max((isFixed ? 0 : scrollY), offset.top - (isFixed ? scrollY : 0));
+				//offset.top = Math.max((isFixed ? 0 : scrollY), offset.top - (isFixed ? scrollY : 0));
 			}
 			return offset;
 		},
@@ -682,12 +682,12 @@
 				while (true) {
 					if (range.compareEndPoints('StartToEnd', range) === 0) {
 						break;
-					} 
+					}
 					else {
 						range.moveEnd('character', -1);
 						if (range.text === origText) {
 							text += '\r\n';
-						} 
+						}
 						else {
 							break;
 						}

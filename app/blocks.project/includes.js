@@ -21,3 +21,5 @@
 //= include section-gallery/section-gallery.js
 //= include validation/validation.js
 //= include to-top/to-top.js
+//= include map-leave/map-leave.js
+//= include infographic/infographic.js
